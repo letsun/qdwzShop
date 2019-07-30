@@ -1,0 +1,110 @@
+
+@import '../../../static/less/common/index.less';
+
+.scroll-wrapper {
+    position: absolute;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    background: #f4f4f4;
+    z-index: 0;
+
+    .px2rem(top, 82);
+    .px2rem(bottom, 0);
+
+    .wrapper {
+		.px2rem(padding-bottom, 10);
+
+        
+        .coupon-list {
+
+            .item {
+                position: relative;
+
+                .px2rem(height, 65);
+                .px2rem(padding-top, 10);
+                .px2rem(padding-bottom, 10);
+                .px2rem(padding-left, 30);
+                .px2rem(padding-right, 30);
+
+
+                .px2rem(line-height, 65);
+                color: #666;
+                font-size: 0;
+
+                background: #fff;
+
+                border-bottom: 1px solid #ddd;
+
+                a {
+                    display: block;
+                }
+
+                .title {
+                    .px2rem(width, 190);
+                    .px2rem(height, 35);
+                    display: inline-block;
+
+                    .px2rem(line-height, 35);
+                    .px2rem(font-size, 23);
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    color: #db1a1b;
+
+                    overflow: hidden;
+                }
+
+                .btn {
+                    .px2rem(width, 110);
+                    .px2rem(height, 35);
+                    .px2rem(margin-left, 20);
+                    display: inline-block;
+
+                    .px2rem(line-height, 35);
+                    .px2rem(font-size, 23);
+                    vertical-align: middle;
+
+                    cursor: pointer;
+
+                    &.physical {
+                        color: #db1a1b;
+                        text-decoration: underline;
+                    }
+                }
+
+                .time {
+                    .px2rem(width, 240);
+                    .px2rem(height, 35);
+                    .px2rem(margin-left, 20);
+                    display: inline-block;
+
+                    .px2rem(line-height, 35);
+                    .px2rem(font-size, 22);
+                    vertical-align: middle;
+                    text-align: right;
+                }
+            }
+
+            
+        }
+
+        .no-order-wrapper {
+            .px2rem(margin-top, 150);
+        }
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+

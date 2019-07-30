@@ -1,0 +1,63 @@
+@import '../../../static/less/common/index.less';
+
+.address-wrapper {
+    position: relative;
+
+    background: #fff;
+
+    .px2rem(padding-top, 30);
+    .px2rem(padding-bottom, 30);
+    .px2rem(padding-left, 17);
+    .px2rem(padding-right, 17);
+    .px2rem(font-size, 25);
+    .address-top {
+        position: relative;
+
+        .px2rem(padding-left, 81);
+        .px2rem(height, 45);
+
+        .name {
+            .px2rem(line-height, 35);
+        }
+        .tel {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            .px2rem(right, 107);
+            .px2rem(line-height, 35);
+        }
+    }
+    .address-infor {
+
+        .px2rem(padding-left, 81);
+        .px2rem(padding-right, 46);
+        .px2rem(line-height, 41);
+
+        .key {
+            .px2rem(width, 130);
+            float: left;
+        }
+        .value {
+            .px2rem(margin-left, 130);
+        }
+        span {
+            margin: 0 2px;
+        }
+    }
+    .icon {
+        position: absolute;
+        top: 50%;
+
+        transform: translateY(-50%);
+        text-align: center;
+
+        color: #888;
+
+        .px2rem(left, 20);
+        .px2rem(width, 52);
+        .px2rem(height, 52);
+        .px2rem(line-height, 52);
+        .px2rem(font-size, 52);
+    }
+}

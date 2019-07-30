@@ -1,0 +1,44 @@
+@import '../../../static/less/common/index.less';
+
+.no-record {
+    margin: 0 auto;
+
+    .px2rem(width, 300);
+    .px2rem(margin-top, 20);
+    .px2rem(margin-bottom, 20);
+    .icon {
+        display: block;
+
+        .px2rem(width, 100);
+        margin: 0 auto;
+
+        text-align: center;
+
+        .px2rem(height, 100);
+        
+        &.noProduct {
+        	background: url("2_10.png") center no-repeat;
+        	background-size: 100% auto;
+        }
+        &.noSearch {
+        	background: url("2_12.png") center no-repeat;
+            background-size: 100% auto;
+        }
+        &.noRecord {
+            background: url("2_11.png") center no-repeat;
+            background-size: 100% auto;
+        }
+        &.noAddress {
+        	background: url("address.png") center no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .text {
+        text-align: center;
+
+        color: #999;
+
+        .px2rem(margin-top, 10);
+        .px2rem(font-size, 20);
+    }
+}

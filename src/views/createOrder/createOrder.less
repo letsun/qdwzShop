@@ -1,0 +1,205 @@
+@import '../../../static/less/common/index.less';
+
+.scroll-wrapper {
+    position: absolute;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    background: #f3f3f3;
+    z-index: 0;
+
+    .px2rem(top, 82);
+    .px2rem(bottom, 80);
+    .wrapper {
+
+        .address-wrapper {
+            position: relative;
+            background: #fff;
+
+            .px2rem(padding-top, 14);
+            .px2rem(padding-bottom, 25);
+            .px2rem(padding-left, 29);
+            .px2rem(padding-right, 29);
+            .receiver-infor {
+
+                position: relative;
+
+                .px2rem(height, 35);
+                .px2rem(font-size, 26);
+                .receiver,
+                .tel {
+                    position: absolute;
+                    top: 0;
+
+                    .px2rem(line-height, 35);
+                }
+                .receiver {
+                    left: 0;
+                }
+                .tel {
+                    .px2rem(right, 78);
+                }
+            }
+            .address-infor {
+                .px2rem(width, 524);
+                .px2rem(line-height, 40);
+                .px2rem(margin-top, 18);
+                .px2rem(font-size, 25);
+                .key {
+                    float: left;
+
+                    .px2rem(width, 130);
+                }
+                .value {
+                    .px2rem(margin-left, 130);
+                    span {
+                        margin: 0 2px;
+                    }
+                }
+            }
+            .icon {
+                position: absolute;
+                top: 50%;
+
+                transform: translateY(-50%);
+                text-align: center;
+
+                color: #777;
+
+                .px2rem(width, 30);
+                .px2rem(height, 30);
+                .px2rem(line-height, 30);
+                .px2rem(font-size, 25);
+                .px2rem(right, 30);
+            }
+
+            .address-tip {
+                .px2rem(padding-top, 10);
+
+                .px2rem(line-height, 26);
+                .px2rem(font-size, 26);
+                color: #e50014;
+            }
+        }
+        .order-wrapper {
+        	.px2rem(margin-top, 8);
+
+            .order-infor {
+                height: 40px;
+                line-height: 40px;
+
+                padding-right: 20px;
+
+                text-align: right;
+
+                background: #fff;
+
+                color: #555;
+
+                border-top: 1px solid #ddd;
+
+                .px2rem(font-size, 20);
+            }
+
+        }
+        .coupon-wrapper {
+            .px2rem(margin-top, 8);
+            .px2rem(margin-bottom, 8);
+        }
+
+        .delivery-type {
+            font-size: 0;
+            .px2rem(padding-left, 29);
+            .px2rem(padding-right, 29);
+            .px2rem(height, 80);
+
+            .clearFix();
+
+            .form-key {
+                float: left;
+
+                .px2rem(width, 130);
+                .px2rem(line-height, 80);
+                .px2rem(font-size, 30);
+            }
+
+            .form-input {
+                float: left;
+
+                position: relative;
+
+                .px2rem(width, 402);
+                .px2rem(height, 80);
+                .px2rem(margin-left, 20);
+                .px2rem(line-height, 80);
+
+                .icon {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+
+                    display: block;
+
+                    transform: translateY(-50%);
+                    text-align: center;
+
+                    color: #999;
+
+                    .px2rem(width, 30);
+                    .px2rem(height, 30);
+                    .px2rem(line-height, 30);
+                    .px2rem(font-size, 30);
+                }
+
+                .radio-group {
+                    position: relative;
+
+                    .radio {
+                        .px2rem(padding-right, 15);
+
+                        .label {
+                            .px2rem(font-size, 30);
+                            .px2rem(line-height, 30);
+                            .px2rem(margin-right, 20);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+
+                        .icon1 {
+                            display: inline-block;
+
+                            vertical-align: middle;
+
+                            border: 1px solid #e50014;
+                            text-align: center;
+
+                            .px2rem(width, 20);
+                            .px2rem(height, 20);
+                            .px2rem(line-height, 20);
+                            .px2rem(font-size, 18);
+                            .px2rem(margin-right, 10);
+
+                            &.icon-gou {
+                                background: #e50014;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}

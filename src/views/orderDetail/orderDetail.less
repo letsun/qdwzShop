@@ -1,0 +1,76 @@
+@import '../../../static/less/common/index.less';
+
+.scroll-wrapper {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    background: #f4f4f4;
+
+    .px2rem(top, 82);
+    .px2rem(bottom, 100);
+    .wrapper {
+        .px2rem(padding-bottom, 5);
+        .delivery {
+            position: relative;
+
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+
+            .px2rem(padding-left, 25);
+            .px2rem(padding-right, 25);
+            .px2rem(height, 70);
+            .name {
+                position: relative;
+
+                .px2rem(font-size, 25);
+                .px2rem(line-height, 70);
+                .px2rem(padding-left, 25);
+                &:before {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+
+                    display: block;
+
+                    content: '';
+                    transform: translateY(-50%);
+
+                    background: #e50014;
+
+                    .px2rem(width, 4);
+                    .px2rem(height, 22);
+                }
+            }
+            .delivery-code {
+                position: absolute;
+                top: 0;
+
+                .px2rem(line-height, 70);
+                .px2rem(font-size, 24);
+                .px2rem(right, 24);
+            }
+        }
+        .confirmBtn-wrapper {
+            .px2rem(padding-top, 40);
+            .px2rem(padding-bottom, 40);
+            .px2rem(padding-left, 40);
+            .px2rem(padding-right, 40);
+        }
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+

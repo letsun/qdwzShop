@@ -1,0 +1,52 @@
+@import '../../../static/less/common/index.less';
+
+@path: '../../components/navFooter/';
+
+.footer-wrapper {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+
+    box-sizing: border-box;
+    width: 100%;
+
+    border-top: 1px solid #e1e1e1;
+    background: #fff;
+    box-shadow: 0px -1px 15px -10px #555;
+
+    .px2rem(height, 91);
+    .footer-item {
+        flex: 1;
+        .px2rem(padding-top, 10);
+        .footer-item-link {
+            color: #777;
+            &.active {
+                color: #e50014;
+            }
+        }
+        .icon {
+            display: block;
+
+            margin: 0 auto;
+
+            text-align: center;
+
+            .px2rem(width, 42);
+            .px2rem(height, 42);
+            .px2rem(line-height, 42);
+            .px2rem(font-size, 42);
+        }
+        .title {
+            display: block;
+
+            text-align: center;
+
+            .px2rem(line-height, 27);
+            .px2rem(font-size, 20);
+            .px2rem(margin-top, 5);
+        }
+    }
+}

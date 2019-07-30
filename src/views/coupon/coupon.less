@@ -1,0 +1,231 @@
+
+@import '../../../static/less/common/index.less';
+
+.tab-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    background: #fff;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+
+    .px2rem(height, 70);
+    .px2rem(top, 82);
+    .px2rem(line-height, 70);
+
+    
+    .item {
+        flex: 1;
+        border-left: 1px solid #ddd;
+        &:first-child {
+            border-left: none;
+        };
+
+        a {
+            display: block;
+            text-align: center;
+
+            .px2rem(font-size, 22);
+            .px2rem(height, 70);
+
+        }
+        &.active {
+            a {
+                color: #e40114;
+                border-bottom: 2px solid #e40114;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+.scroll-wrapper {
+    position: absolute;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    background: #f4f4f4;
+    z-index: 0;
+
+    .px2rem(top, 82 + 70);
+    .px2rem(bottom, 0);
+
+    .wrapper {
+		.px2rem(padding-bottom, 10);
+
+        
+        .coupon-list {
+            .px2rem(padding-top, 18);
+            .px2rem(padding-bottom, 18);
+            .px2rem(padding-left, 18);
+            .px2rem(padding-right, 18);
+            
+            .item {
+                background: #fff;
+                box-shadow: 0 0 5px 1px #ddd;
+
+                .px2rem(height, 166);
+                .px2rem(margin-top, 18);
+                
+                .clearFix();
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                .coupon-left {
+                    float: left;
+
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-image: url("2_06.png"); 
+                    color: #fff;
+
+                    .px2rem(width, 183);
+                    .px2rem(height, 166);
+
+                    .title {
+                        text-align: center;
+    
+                        .px2rem(height, 38);
+                        .px2rem(line-height, 38);
+                        .px2rem(font-size, 23);
+                        .px2rem(margin-top, 16);
+                    }
+                    .money {
+                        text-align: center;
+                        margin: 0 auto;
+                        border-bottom: 1px solid #ddd;
+                        
+                        .px2rem(width, 137);
+                        .px2rem(height, 60);
+                        .px2rem(line-height, 50);
+                        .px2rem(font-size, 37);
+                        .px2rem(margin-top, 1);
+                        span {
+                           .px2rem(font-size, 27); 
+                        }
+                    }
+                    .status {
+                        text-align: center;
+    
+                        .px2rem(height, 38);
+                        .px2rem(line-height, 38);
+                        .px2rem(font-size, 20);
+                        .px2rem(margin-top, 4);
+                    }
+
+                }
+                .coupon-right {
+                    float: left;
+                    position: relative;
+
+                    .px2rem(width, 372);
+                    .px2rem(height, 140);
+                    .px2rem(padding-top, 14);
+                    .px2rem(padding-bottom, 14);
+                    .px2rem(padding-left, 29);
+                    .px2rem(padding-right, 18);
+
+                    .title {
+                        color: #000;
+
+                        .px2rem(line-height, 37);
+                        .px2rem(font-size, 22);
+
+                    }
+
+                    .time-period {
+                        color: #555;
+
+                        .px2rem(line-height, 36);
+                        .px2rem(font-size, 18);
+                    }
+
+                    .code {
+                        text-align: right;
+                        color: #f34d4d;
+                        position: absolute;
+                        width: 100%;
+
+
+                        .px2rem(height, 35);
+                        .px2rem(line-height, 35);
+                        .px2rem(font-size, 20);
+                        .px2rem(bottom, 18);
+                        .px2rem(right, 18);
+
+                    }
+                    .status {
+                        position: absolute;
+                        background-size: 100% 100%;
+                        
+                        background-repeat: no-repeat;
+
+                        .px2rem(width, 160);
+                        .px2rem(height, 144);
+                        .px2rem(right, 10);
+                        .px2rem(top, 10);
+
+                        &.expired-status {
+                            background-image: url("3_06.png");
+                        }
+                        &.used-status {
+                            background-image: url("3_11.png");
+                        }
+
+                    }
+
+                }
+                &.no-use {
+                    .coupon-left {
+                       &.fullReduce {
+                            background-image: url("2_03.png");
+                       } 
+                       &.coupon {
+                            background-image: url("2_06.png");
+                       } 
+                       &.cashCoupon {
+                            background-image: url("2_07.png");
+                       }
+                    }
+                }
+
+                &.used {
+                    .coupon-left {
+                       &.fullReduce {
+                            background-image: url("3_12.png");
+                       } 
+                       &.coupon {
+                            background-image: url("2_06.png");
+                       } 
+                       &.cashCoupon {
+                            background-image: url("2_07.png");
+                       }
+                    }
+                }
+            }
+
+            
+        }
+
+        .no-order-wrapper {
+            .px2rem(margin-top, 150);
+        }
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+

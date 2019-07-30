@@ -1,0 +1,49 @@
+@import '../../../static/less/common/index.less';
+
+.loading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 9999;
+    .px2rem(top, 82);
+    &.noTop {
+        top: 0;
+    }
+    &.bottom {
+        .px2rem(bottom, 91);
+    }
+    &.coupon {
+        .px2rem(top, 82 + 70);
+    }
+    .loading {
+        display: block;
+        text-align: center;
+        color: #999;
+
+        .px2rem(font-size, 50);
+        .px2rem(width, 50);
+        .px2rem(height, 50);
+        .px2rem(line-height, 50);
+        &.iconRotate {
+            animation: iconRotate 0.8s linear infinite;
+        }
+    }
+
+}
+
+@keyframes iconRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

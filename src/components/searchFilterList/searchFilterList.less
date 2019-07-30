@@ -1,0 +1,47 @@
+@import '../../../static/less/common/index.less';
+
+.filter-wrapper {
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    left: 0;
+
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(100px);
+
+    .px2rem(top, 82);
+    .px2rem(bottom, 0);
+    &.search-enter-active,
+    &.search-leave-active {
+        transition: opacity 0.3s ease;
+    }
+
+    &.search-enter,
+    &.search-leave-to {
+        opacity: 0;
+    }
+    
+    .scroll-wrapper {
+        height: 100%;
+        overflow: hidden;
+    }
+    .filter-list {
+        .px2rem(padding-top, 20);
+        .px2rem(padding-bottom, 20);
+        .px2rem(padding-left, 40);
+        .px2rem(padding-right, 40);
+        .item {
+            overflow: hidden;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            border-bottom: 1px solid #ccc;
+
+            .px2rem(height, 65);
+            .px2rem(line-height, 65);
+            .px2rem(font-size, 23);
+            transition: all 0.5s ease;
+        }
+    }
+}

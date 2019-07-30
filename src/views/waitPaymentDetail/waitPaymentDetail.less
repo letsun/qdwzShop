@@ -1,0 +1,130 @@
+@import '../../../static/less/common/index.less';
+
+.scroll-wrapper {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    background: #f4f4f4;
+
+    .px2rem(top, 82);
+    .px2rem(bottom, 107);
+    .wrapper {
+		.px2rem(padding-bottom, 5);
+
+        .countdown-wrapper {
+            background-color: #fff;
+            position: relative;
+            
+            .px2rem(margin-bottom, 8);
+            .px2rem(padding-top, 20);
+            .px2rem(padding-bottom, 20);
+            .px2rem(padding-left, 50);
+            
+            
+            .status-name {
+                .px2rem(line-height, 50);
+                .px2rem(font-size, 26);
+            }
+
+            .countdown-text {
+                .px2rem(line-height, 40);
+                .px2rem(font-size, 20);
+            }
+
+            .icon-wrapper {
+                position: absolute;
+                top: 50%;
+
+                transform: translateY(-50%);
+
+                color: #e50014;
+
+                text-align: center;
+                font-size: 0;
+
+                .px2rem(right, 60);
+
+                .icon {
+                    display: inline-block;
+
+                    vertical-align: middle;
+
+                    .px2rem(width, 60);
+                    .px2rem(height, 40);
+                    .px2rem(line-height, 40);
+                    .px2rem(font-size, 40);
+                }
+
+                .icon-text {
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    .px2rem(font-size, 25);
+                    .px2rem(line-height, 40);
+                }
+            }
+        }
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.myaddress {
+    position: relative;
+    background: #fff;
+
+    .px2rem(padding-top, 14);
+    .px2rem(padding-bottom, 25);
+    .px2rem(padding-left, 29);
+    .px2rem(padding-right, 29);
+}
+.receiver-infor {
+
+    position: relative;
+
+    .px2rem(height, 35);
+    .px2rem(font-size, 26);
+    .receiver,
+    .tel {
+        position: absolute;
+        top: 0;
+
+        .px2rem(line-height, 35);
+    }
+    .receiver {
+        left: 0;
+    }
+    .tel {
+        .px2rem(right, 78);
+    }
+}
+.address-infor {
+    .px2rem(width, 524);
+    .px2rem(line-height, 40);
+    .px2rem(margin-top, 18);
+    .px2rem(font-size, 25);
+    .key {
+        float: left;
+
+        .px2rem(width, 130);
+    }
+    .value {
+        .px2rem(margin-left, 130);
+        span {
+            margin: 0 2px;
+        }
+    }
+}

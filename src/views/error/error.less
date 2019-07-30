@@ -1,0 +1,40 @@
+@import '../../../static/less/common/index.less';
+
+.scroll-wrapper {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+
+    overflow: hidden;
+
+
+    background: #fff;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        .icon {
+            text-align: center;
+            color: #19d100;
+            margin: 0 auto;
+            display: block;
+
+            .px2rem(width, 80);
+            .px2rem(height, 100);
+            .px2rem(line-height, 100);
+            .px2rem(font-size, 80);
+        }
+        .text {
+            .px2rem(line-height, 50);
+            .px2rem(font-size, 25);
+            .px2rem(margin-top, 25);
+        }
+    }
+    
+}

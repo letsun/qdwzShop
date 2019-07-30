@@ -1,0 +1,120 @@
+@import '../../../static/less/common/index.less';
+
+.win-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.win-wrapper {
+    position: relative;
+    z-index: 2;
+
+    opacity: 1;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 13px -7px #000;
+
+    .px2rem(width, 480);
+    .content-wrapper {
+        text-align: center;
+
+        color: #555;
+        word-wrap: break-word;
+        word-break: break-all;
+
+        .px2rem(min-height, 50);
+        .px2rem(padding-top, 50);
+        .px2rem(padding-bottom, 40);
+        .px2rem(padding-left, 30);
+        .px2rem(padding-right, 30);
+        .px2rem(line-height, 40);
+        .px2rem(font-size, 25);
+        .cartSuccess-icon {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            color: #ff9f31;
+
+            .px2rem(width, 80);
+            .px2rem(height, 80);
+            .px2rem(line-height, 80);
+            .px2rem(font-size, 80);
+            .px2rem(margin-bottom, 15);
+
+        }
+        .sucTip {
+            .px2rem(font-size, 35);
+        }
+    }
+    .btn-wrapper {
+        display: flex;
+
+        border-top: 1px solid #e1e1e1;
+
+        .px2rem(height, 75);
+        .px2rem(line-height, 75);
+        .btn {
+            box-sizing: border-box;
+
+            text-align: center;
+
+            color: #3385ff;
+
+            flex: 1;
+            .px2rem(font-size, 28);
+            &.btn-last {
+                &:last-child {
+                    border-left: 1px solid #e1e1e1;
+                }
+            }
+        }
+    }
+}
+
+.mask {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transition: all .5s ease-in;
+
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(20px);
+}
+
+.showWin {
+    animation: showWin .3s ease;
+}
+
+.showMask {
+    animation: showWin .3s ease;
+}
+
+@keyframes showWin {
+    0% {
+        transform: scale3d(1.2, 1.2, 1.2);
+
+        opacity: 0;
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+
+        opacity: 1;
+    }
+}
+

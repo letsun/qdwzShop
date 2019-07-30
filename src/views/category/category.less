@@ -1,0 +1,44 @@
+@import '../../../static/less/common/index.less';
+
+.category-wrapper {
+    position: absolute;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    z-index: 0;
+
+    .px2rem(top, 82);
+    .px2rem(bottom, 91);
+    .menu-container {
+        position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+        overflow: hidden;
+
+        .px2rem(width, 140);
+        
+    }
+    .goods-container {
+    	position: absolute;
+    	overflow: hidden;
+		top: 0;
+		right: 0;
+		bottom: 0;
+    	.px2rem(width,497);
+
+    }
+}
+
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}

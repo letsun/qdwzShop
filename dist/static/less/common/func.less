@@ -1,0 +1,58 @@
+@base:640; /*使用px2rem和rem2px混合宏，必须定义@base设计稿大小*/
+
+/**
+ * 实际px转换成rem
+ * @param  @name 属性名
+ * @param @px   实际px值
+ * @return 对应属性名经过优化的rem属性值
+ */
+.px2rem(@name,@px){
+    @{name}:@px*320/@base/20*1rem;
+}
+
+/**
+ * rem转换成实际的px
+ * @param  @name 属性名
+ * @param @rem  rem值
+ * @return 对应属性名经过优化的px属性值
+ */
+.rem2px(@name,@rem){
+    @{name}:@rem*@base*1px;
+}
+
+.backgroundPostion(@left,@top){
+    &:before{
+        content:'';
+        background-position: @left @top;
+    }
+}
+
+
+/**
+ * 如果不想用rem，可以使用px，以下代码可以自动优化各种屏幕的px，让所有属性显示的效果一样
+ * @param  @name 属性名
+ * @param  @px   实际的px值
+ * @return     对应属性名经过优化的px属性值
+ */
+.px2px(@name, @px){
+    @{name}: round(@px / 2) * 1px;
+    [data-dpr="2"] & {
+        @{name}: round(@px * 2.5 / 2.7) * 1px;
+    }
+    // for mx3
+    [data-dpr="2.5"] & {
+        @{name}: round(@px * 2.5 / 2) * 1px;
+    }
+    // for 小米note
+    [data-dpr="2.75"] & {
+        @{name}: round(@px * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+        @{name}: round(@px / 2 * 3) * 1px
+    }
+    // for 三星note4
+    [data-dpr="4"] & {
+        @{name}: @px * 2px;
+    }
+}
+

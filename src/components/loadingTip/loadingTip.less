@@ -1,0 +1,66 @@
+@import '../../../static/less/common/index.less';
+
+.loading-wrapper {
+    width: 100%;
+
+    text-align: center;
+
+    color: #ccc;
+
+    display: flex;
+    justify-content: center; 
+
+    .px2rem(margin-top, 30);
+    .px2rem(padding-bottom, 30);
+    .px2rem(line-height, 20);
+    .px2rem(font-size, 20);
+
+    .icon-wrapper {
+    	display: inline-block;
+
+    	position: relative;
+
+		vertical-align: middle;
+		text-align: center;
+
+
+    	.px2rem(width, 20);
+    	.px2rem(height, 20);
+    	.px2rem(line-height, 20);
+    	
+    	&.iconRotate {
+    		animation: iconRotate 0.7s linear infinite;
+    	}
+    	.icon {
+    		display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+
+    		.px2rem(width, 20);
+	    	.px2rem(height, 20);
+            .px2rem(line-height, 20);
+	    	.px2rem(font-size, 20);
+            .px2rem(margin-left, -6);    
+            .px2rem(margin-top, 0.2);    
+    	}
+		
+    }
+    .loading-tip {
+    	display: inline-block;
+    	vertical-align: middle;
+
+    	.px2rem(line-height, 20);
+    	.px2rem(margin-left, 10);
+
+    	
+    }
+}
+
+@keyframes iconRotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

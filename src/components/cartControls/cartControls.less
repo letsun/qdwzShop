@@ -1,0 +1,74 @@
+@import '../../../static/less/common/index.less';
+
+.controls {
+    position: relative;
+    
+    .cart-reduce,
+    .cart-add {
+        position: absolute;
+        top: 0;
+
+        box-sizing: border-box;
+
+        text-align: center;
+
+        border: 1px solid #ddd;
+        background: #f9f7fa;
+    }
+    .cart-reduce {
+        left: 0;
+    }
+    .cart-add {
+        right: 0;
+    }
+    .cart-number {
+        position: absolute;
+        top: 0;
+
+        box-sizing: border-box;
+
+        text-align: center;
+
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+
+        .px2rem(font-size, 20);
+    }
+
+    &.cart-type-list {
+        .px2rem(width, 104);
+        .px2rem(height, 32);
+
+        .cart-reduce,
+        .cart-add {
+        	.px2rem(width, 32);
+            .px2rem(height, 32);
+            .px2rem(line-height, 30);
+            .px2rem(font-size, 25);
+        }
+        .cart-number {
+        	.px2rem(width, 39);
+            .px2rem(height, 32);
+            .px2rem(line-height, 30);
+            .px2rem(left, 32);
+        }
+    }
+    &.cart-type-detail {
+        .px2rem(width, 180);
+        .px2rem(height, 60);
+
+        .cart-reduce,
+        .cart-add {
+        	.px2rem(width, 44);
+            .px2rem(height, 60);
+            .px2rem(line-height, 60);
+            .px2rem(font-size, 25);
+        }
+        .cart-number {
+        	.px2rem(width, 92);
+            .px2rem(height, 60);
+            .px2rem(line-height, 60);
+            .px2rem(left, 44);
+        }
+    }
+}

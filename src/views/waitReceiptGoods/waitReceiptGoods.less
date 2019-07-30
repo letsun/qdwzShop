@@ -1,0 +1,30 @@
+@import '../../../static/less/common/index.less';
+
+.scroll-wrapper {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    background: #f4f4f4;
+
+    .px2rem(top, 82);
+    .px2rem(bottom, 0);
+    .wrapper {
+		.px2rem(padding-bottom, 10);
+        
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}

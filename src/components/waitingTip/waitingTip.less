@@ -1,0 +1,90 @@
+@import '../../../static/less/common/index.less';
+
+.loading-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999999;
+
+    .loading-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+
+        .loading-content {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            border: 1px solid #333;
+
+            .px2rem(width, 160);
+            .px2rem(height, 160);
+        }
+
+        .icon-wrapper {
+            
+            position: relative;
+
+            margin: 0 auto;
+
+            display: block;
+
+            text-align: center;
+            color: #fff;
+
+
+            .px2rem(width, 70);
+            .px2rem(height, 60);
+            .px2rem(line-height, 60);
+            .px2rem(padding-top, 40);
+            
+            &.iconRotate {
+                animation: iconRotate 0.7s linear infinite;
+            }
+            .icon {
+                margin: 0 auto;
+
+                display: block;
+                text-align: center;
+
+                background: url("loading.gif") center no-repeat;
+                background-size: 100% 100%;
+
+
+                .px2rem(width, 50);
+                .px2rem(height, 50);
+                .px2rem(line-height, 50);
+                .px2rem(font-size, 50);
+            }
+            
+        }
+        .loading-tip {
+            display: block;
+            text-align: center;
+            color: #fff;
+
+            .px2rem(font-size, 21);
+            .px2rem(line-height, 40);
+
+            
+        }
+    }
+
+    
+}
+
+@keyframes iconRotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

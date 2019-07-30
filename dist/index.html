@@ -1,0 +1,11 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=hotcss content="max-width=640"><meta name=hotcss content="design-width=640"><script src=./static/js/hotcss.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js></script><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><title></title><script src=static/js/jquery-3.2.1.min.js></script><link href=./static/css/app.b7034be17742c283b84b60a2fa30e556.css rel=stylesheet></head><body><div id=app></div><script>$(function () {
+            // 输入框失去焦点兼容苹果系统
+            $('#app').on('blur','input,textarea,select',function(){
+                setTimeout(function () {
+                    var hasFocus = $('input').is(':focus') || $('textarea').is(':focus') || $('select').is(':focus');
+                    if (!hasFocus) {
+                        window.scroll(0,0);
+                    }
+                },100);
+            });
+        })</script><script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script><script type=text/javascript src=./static/js/vendor.8718fb52025279e598d3.js></script><script type=text/javascript src=./static/js/app.f2cb3f8996d0ef0601ed.js></script></body></html>

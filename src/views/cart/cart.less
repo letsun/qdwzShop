@@ -1,0 +1,163 @@
+@import '../../../static/less/common/index.less';
+
+.container-wrapper {
+    position: absolute;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    background: #f3f3f3;
+    z-index: 0;
+
+    .px2rem(top, 82);
+    .px2rem(bottom, 91);
+}
+.scroll-wrapper {
+    position: absolute;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    background: #f3f3f3;
+
+    .px2rem(top, 0);
+    .px2rem(bottom, 80);
+
+    .wrapper {
+        .cart-list {
+            .cart-item {
+                position: relative;
+
+                background: #fff;
+
+                .px2rem(height, 185);
+                .px2rem(margin-top, 9);
+                .check-icon-wrapper {
+                    position: absolute;
+                    top: 50%;
+
+                    transform: translateY(-50%);
+
+                    .px2rem(left, 12);
+                }
+                .cart-pic {
+                    position: absolute;
+
+                    overflow: hidden;
+
+                    border: 1px solid #e1e1e1;
+                    display: flex;
+
+                    justify-content: center;
+                    align-items: center;
+                   
+                    .px2rem(width, 157);
+                    .px2rem(height, 157);
+                    .px2rem(left, 58);
+                    .px2rem(top, 9);
+
+                    img {
+                        display: block;
+                    }
+                }
+                .cart-right {
+                    position: absolute;
+
+                    .px2rem(width, 370);
+                    .px2rem(right, 29);
+                    .px2rem(top, 9);
+                    .cart-title {
+                        overflow: hidden;
+
+                        width: 100%;
+
+                        white-space: normal;
+                        text-overflow: ellipsis;
+
+                        color: #666;
+
+                        .px2rem(line-height, 43);
+                        .px2rem(height, 43);
+                        .px2rem(font-size, 24);
+                    }
+                    .cart-desc {
+                        display: -webkit-box;
+                        overflow: hidden;
+
+                        text-overflow: ellipsis;
+
+                        color: #919191;
+
+                        -webkit-line-clamp: 2; /* 这个表示要显示几行 */
+                        -webkit-box-orient: vertical;
+                        .px2rem(height, 66);
+                        .px2rem(line-height, 33);
+                        .px2rem(font-size, 21);
+                    }
+                    .cart-controls {
+                        position: relative;
+
+                        .px2rem(height, 32);
+                        .px2rem(margin-top, 9);
+                        .cartControls-wrapper {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                        .cart-price {
+                            position: absolute;
+                            top: 0;
+
+                            color: #e70015;
+
+                            .px2rem(left, 121);
+                            .px2rem(font-size, 26);
+                            .px2rem(line-height, 32);
+                        }
+                        .del-cart-icon {
+                            position: absolute;
+                            top: 0;
+
+                            color: #686868;
+
+                            .px2rem(width, 32);
+                            .px2rem(height, 32);
+                            .px2rem(line-height, 32);
+                            .px2rem(right, 22);
+                            .px2rem(font-size, 32);
+                        }
+                    }
+                }
+            }
+        }
+        .loading-tip {
+            width: 100%;
+
+            text-align: center;
+
+            color: #ccc;
+
+            .px2rem(margin-top, 10);
+            .px2rem(padding-bottom, 30);
+            .px2rem(line-height, 50);
+            .px2rem(font-size, 20);
+        }
+        .no-record-wrapper {
+            .px2rem(margin-top, 300);
+        }
+    } 
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}

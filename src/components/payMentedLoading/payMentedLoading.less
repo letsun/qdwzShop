@@ -1,0 +1,52 @@
+@import '../../../static/less/common/index.less';
+
+.payMented-loading {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 9999;
+    .container {
+        width: 100%;
+        text-align: center;
+        background: url("5_02.png") top no-repeat;
+        background-size: 100%;
+
+
+        .px2rem(height, 533);
+        .px2rem(margin-top, 60);
+        .countdown {
+            color: #fff;
+            margin: 0 auto;
+
+            .px2rem(width, 290);
+            .px2rem(height, 290);
+            .px2rem(line-height, 290);
+            .px2rem(font-size, 130);
+            .px2rem(padding-top, 120);
+        }
+        .countdown-text {
+            .px2rem(font-size, 26);
+            .px2rem(line-height, 40);
+            .px2rem(margin-top, 140);
+        }
+        
+    }
+    .advertage {
+        width: 100%;
+        color: #fff;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: url("5_04.png") no-repeat;
+        text-align: center;
+        letter-spacing: 5px;
+
+        .px2rem(height, 251);
+        .px2rem(line-height, 351);
+        .px2rem(font-size, 30);
+    }
+}

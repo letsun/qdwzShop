@@ -1,0 +1,122 @@
+@import '../../../static/less/common/index.less';
+
+.scroll-wrapper {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    background: #f4f4f4;
+
+    .px2rem(top, 82);
+    .px2rem(bottom, 0);
+    .wrapper {
+        .delivery {
+            position: relative;
+
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+
+            .px2rem(padding-left, 25);
+            .px2rem(padding-right, 25);
+            .px2rem(height, 70);
+            .name {
+                position: relative;
+
+                .px2rem(height, 70);
+                .px2rem(font-size, 25);
+                .px2rem(line-height, 70);
+                .px2rem(padding-left, 25);
+                &:before {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+
+                    display: block;
+
+                    content: '';
+                    transform: translateY(-50%);
+
+                    background: #e50014;
+
+                    .px2rem(width, 4);
+                    .px2rem(height, 22);
+                }
+            }
+            .delivery-code {
+                position: absolute;
+                top: 0;
+
+                .px2rem(line-height, 70);
+                .px2rem(font-size, 24);
+                .px2rem(right, 24);
+            }
+        }
+        .confirmBtn-wrapper {
+            .px2rem(padding-top, 40);
+            .px2rem(padding-bottom, 40);
+            .px2rem(padding-left, 40);
+            .px2rem(padding-right, 40);
+        }
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.myaddress {
+    position: relative;
+    background: #fff;
+
+    .px2rem(padding-top, 14);
+    .px2rem(padding-bottom, 25);
+    .px2rem(padding-left, 29);
+    .px2rem(padding-right, 29);
+}
+.receiver-infor {
+
+    position: relative;
+
+    .px2rem(height, 35);
+    .px2rem(font-size, 26);
+    .receiver,
+    .tel {
+        position: absolute;
+        top: 0;
+
+        .px2rem(line-height, 35);
+    }
+    .receiver {
+        left: 0;
+    }
+    .tel {
+        .px2rem(right, 78);
+    }
+}
+.address-infor {
+    .px2rem(width, 524);
+    .px2rem(line-height, 40);
+    .px2rem(margin-top, 18);
+    .px2rem(font-size, 25);
+    .key {
+        float: left;
+
+        .px2rem(width, 130);
+    }
+    .value {
+        .px2rem(margin-left, 130);
+        span {
+            margin: 0 2px;
+        }
+    }
+}

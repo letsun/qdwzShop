@@ -1,0 +1,59 @@
+@import '../../../static/less/common/index.less';
+
+
+
+.cart-infor {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+
+    width: 100%;
+
+    background: #fff;
+    border-top: 1px solid #f1f1f1;
+    box-sizing: border-box;
+
+    .px2rem(height, 80);
+    .px2rem(bottom, 0);
+    .left {
+        color: #e50014;
+
+        .px2rem(padding-left, 70);
+        .px2rem(line-height, 80);
+        .px2rem(font-size, 27);
+    }
+    &.type-cart {
+        .px2rem(bottom, 0);
+    }
+    .buy {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        text-align: center;
+
+        color: #fff;
+        background: #fca031;
+
+        .px2rem(width, 253);
+        .px2rem(height, 80);
+        .px2rem(line-height, 80);
+        .px2rem(font-size, 25);
+        .icon {
+            display: inline-block;
+
+            vertical-align: middle;
+
+            color: #fff;
+
+            .px2rem(width, 30);
+            .px2rem(height, 30);
+            .px2rem(line-height, 30);
+            .px2rem(font-size, 28);
+            .px2rem(margin-right, 10);
+        }
+        &.checked {
+            background: #ccc;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+
+@import '../../../static/less/common/index.less';
+
+
+.scroll-wrapper {
+	position: absolute;
+	z-index: 0;
+	left: 0;
+
+	overflow: hidden;
+
+	width: 100%;
+
+	background: #fff;
+
+	.px2rem(top, 82);
+	.px2rem(bottom, 0);
+
+	.wrapper {
+		.px2rem(padding-bottom, 10);
+
+		.succ-title {
+			
+			text-align: center;
+
+			.px2rem(padding-top,100);
+
+			.px2rem(line-height,100);
+
+			.clearFix();
+
+			.icon {
+				display: block;
+				
+				color: #00ad2c;
+
+				.px2rem(font-size,100);
+			}
+
+			.succ-text {
+
+				display: block;
+				
+				font-weight: bold;
+				color: #595959;
+
+				.px2rem(font-size,34);
+			}
+		}
+
+		.succ-dec {
+			
+			 margin: 0 auto;
+
+			
+			 color: #6e6e6e;
+			 text-align: center;
+
+			 .px2rem(padding-top,0);
+			 .px2rem(width,430);
+			 .px2rem(font-size,24);
+			 .px2rem(line-height,40);
+
+		}
+
+		.submit-wra {
+			 margin: 0 auto;
+			 
+			.px2rem(width,440);
+			.px2rem(margin-top,77);
+
+		}
+	}
+}
+

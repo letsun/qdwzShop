@@ -1,0 +1,42 @@
+@import '../../../static/less/common/index.less';
+
+.coupon-list {
+    .item {
+        position: relative;
+
+        border-bottom: 1px solid #ddd;
+        background: #fff;
+
+        .px2rem(padding-top, 28);
+        .px2rem(padding-bottom, 28);
+        .px2rem(padding-left, 50);
+        .px2rem(padding-right, 50);
+        &:last-child {
+            border-bottom: none;
+        }
+        &.disable {
+            background: #f7f7f7;
+        }
+        .title {
+            color: #e50112;
+
+            .px2rem(line-height, 35);
+            .px2rem(font-size, 25);
+        }
+        .desc {
+            color: #777;
+
+            .px2rem(margin-top, 10);
+            .px2rem(line-height, 25);
+            .px2rem(font-size, 22);
+        }
+        .check-icon-wrapper {
+            position: absolute;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            .px2rem(right, 50);
+        }
+    }
+}
