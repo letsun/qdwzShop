@@ -7,7 +7,13 @@
 				</div>
 				<div class="pro-right">
 					<div class="pro-title">{{item.goodsName}}</div>
-					<div class="pro-desc">{{item.title}}</div>
+					<!--<div class="pro-desc">{{item.title}}</div>-->
+					<div class="spec-list" v-if="item.chooseJsonProp != null">
+						<div class="spec-item" v-for="(spec,key,i) in item.chooseJsonProp">
+							<div class="spec-key">{{key}}：</div>
+							<div class="spec-val">{{spec}}</div>
+						</div>
+					</div>
 					<div class="pro-controls">
 						<div class="pro-price">
 							<template v-if="item.goodsType === 0">
@@ -70,11 +76,12 @@
 				query: {}
 			}
 		},
-		mounted() {},
+		mounted() {
+
+		},
 		methods: {
 
 			toDetail(item) {
-
 				if (this.isCart) {
                 	this.query.isCart = this.isCart;
                 }

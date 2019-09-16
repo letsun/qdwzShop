@@ -17,8 +17,14 @@
 								</div>
 								<div class="cart-right">
 									<div class="cart-title">{{item.title}}</div>
-									<div class="cart-desc">
+									<!--<div class="cart-desc">
 										{{item.goodsName}}
+									</div>-->
+									<div class="spec-list" v-if="item.chooseJsonProp != null">
+										<div class="spec-item" v-for="(spec,key,i) in item.chooseJsonProp">
+											<div class="spec-key">{{key}}：</div>
+											<div class="spec-val">{{spec}}</div>
+										</div>
 									</div>
 									<div class="cart-controls">
 										<div class="cartControls-wrapper">

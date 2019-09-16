@@ -1,0 +1,151 @@
+/*使用px2rem和rem2px混合宏，必须定义@base设计稿大小*/
+/**
+ * 实际px转换成rem
+ * @param  @name 属性名
+ * @param @px   实际px值
+ * @return 对应属性名经过优化的rem属性值
+ */
+/**
+ * rem转换成实际的px
+ * @param  @name 属性名
+ * @param @rem  rem值
+ * @return 对应属性名经过优化的px属性值
+ */
+/**
+ * 如果不想用rem，可以使用px，以下代码可以自动优化各种屏幕的px，让所有属性显示的效果一样
+ * @param  @name 属性名
+ * @param  @px   实际的px值
+ * @return     对应属性名经过优化的px属性值
+ */
+@import '../../fonts/iconfont.css';
+.clearFix:before,
+.clearFix:after {
+  content: " ";
+  display: table;
+}
+.clearFix:after {
+  clear: both;
+}
+.ellipsisNormal {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pro-list .pro-item {
+  position: relative;
+  border-bottom: 1px solid #e1e1e1;
+  background: #fff;
+  height: 6.125rem;
+}
+.pro-list .pro-item:last-child {
+  border-bottom: none;
+}
+.pro-list .pro-item .pro-pic {
+  position: absolute;
+  top: 50%;
+  overflow: hidden;
+  transform: translateY(-50%);
+  border: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.925rem;
+  height: 3.925rem;
+  left: 0.5rem;
+}
+.pro-list .pro-item .pro-pic img {
+  display: block;
+}
+.pro-list .pro-item .pro-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9.5rem;
+  right: 1.375rem;
+}
+.pro-list .pro-item .pro-right .pro-title {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #666;
+  line-height: 0.825rem;
+  height: 1.075rem;
+  font-size: 0.6rem;
+}
+.pro-list .pro-item .pro-right .pro-desc {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #919191;
+  -webkit-line-clamp: 2;
+  /* 这个表示要显示几行 */
+  -webkit-box-orient: vertical;
+  height: 1.65rem;
+  line-height: 0.825rem;
+  font-size: 0.525rem;
+}
+.pro-list .pro-item .pro-right .pro-controls {
+  position: relative;
+  height: 0.8rem;
+  margin-top: 0.225rem;
+}
+.pro-list .pro-item .pro-right .pro-controls .pro-price {
+  position: absolute;
+  top: 0;
+  color: #e70015;
+  left: 0rem;
+  font-size: 0.65rem;
+  line-height: 0.8rem;
+}
+.pro-list .pro-item .pro-right .pro-controls .pro-number {
+  position: absolute;
+  color: #555;
+  line-height: 0.8rem;
+  left: 7.175rem;
+  top: 0rem;
+  font-size: 0.575rem;
+}
+.pro-list .pro-item .pro-right .spec-list {
+  width: 8.5rem;
+  margin-top: 0.225rem;
+  line-height: 0.8rem;
+  font-size: 0.575rem;
+}
+.pro-list .pro-item .pro-right .spec-list .spec-item {
+  margin-bottom: 0.1rem;
+}
+.pro-list .pro-item .pro-right .spec-list .spec-item:before,
+.pro-list .pro-item .pro-right .spec-list .spec-item:after {
+  content: " ";
+  display: table;
+}
+.pro-list .pro-item .pro-right .spec-list .spec-item:after {
+  clear: both;
+}
+.pro-list .pro-item .pro-right .spec-list .spec-item .spec-key {
+  float: left;
+  width: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pro-list .pro-item .pro-right .spec-list .spec-item .spec-val {
+  float: left;
+  width: 5.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pro-list .arrow-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #000;
+  font-size: 0.6rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  right: 0.5rem;
+}

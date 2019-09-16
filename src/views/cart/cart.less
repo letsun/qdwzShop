@@ -98,6 +98,41 @@
                         .px2rem(line-height, 33);
                         .px2rem(font-size, 21);
                     }
+
+                    .spec-list {
+                        .px2rem(width, 340);
+                        .px2rem(margin-top, 9);
+
+                        .px2rem(line-height, 32);
+                        .px2rem(font-size, 23);
+
+                        .spec-item {
+                            .px2rem(margin-bottom, 4);
+
+                            .clearFix();
+
+                            .spec-key {
+                                float: left;
+
+                                .px2rem(width, 120);
+
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+
+                            .spec-val {
+                                float: left;
+
+                                .px2rem(width, 220);
+
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+
                     .cart-controls {
                         position: relative;
 

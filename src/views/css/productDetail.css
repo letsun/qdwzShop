@@ -1,0 +1,381 @@
+/*使用px2rem和rem2px混合宏，必须定义@base设计稿大小*/
+/**
+ * 实际px转换成rem
+ * @param  @name 属性名
+ * @param @px   实际px值
+ * @return 对应属性名经过优化的rem属性值
+ */
+/**
+ * rem转换成实际的px
+ * @param  @name 属性名
+ * @param @rem  rem值
+ * @return 对应属性名经过优化的px属性值
+ */
+/**
+ * 如果不想用rem，可以使用px，以下代码可以自动优化各种屏幕的px，让所有属性显示的效果一样
+ * @param  @name 属性名
+ * @param  @px   实际的px值
+ * @return     对应属性名经过优化的px属性值
+ */
+@import '../../fonts/iconfont.css';
+.clearFix:before,
+.clearFix:after {
+  content: " ";
+  display: table;
+}
+.clearFix:after {
+  clear: both;
+}
+.ellipsisNormal {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.scroll-wrapper {
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 0;
+  top: 2.05rem;
+  bottom: 2.75rem;
+}
+.scroll-wrapper .pro-title {
+  color: #fff;
+  background: #676568;
+  line-height: 1.125rem;
+  padding-top: 0.425rem;
+  padding-bottom: 0.425rem;
+  padding-left: 0.95rem;
+  padding-right: 0.95rem;
+  font-size: 0.65rem;
+}
+.scroll-wrapper .price-wrapper {
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.scroll-wrapper .price-wrapper .price {
+  color: #da444f;
+  line-height: 0.95rem;
+  font-size: 0.725rem;
+}
+.scroll-wrapper .price-wrapper .price .span1 {
+  display: inline-block;
+  font-size: 0.9rem;
+}
+.scroll-wrapper .price-wrapper .price .active {
+  color: #000;
+  text-decoration: line-through;
+}
+.scroll-wrapper .price-wrapper .price-desc {
+  color: #666;
+  line-height: 0.875rem;
+  font-size: 0.55rem;
+  margin-top: 0.25rem;
+}
+.scroll-wrapper .price-wrapper .freight-range {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #555;
+  right: 0.5rem;
+  line-height: 1.95rem;
+  font-size: 0.55rem;
+}
+.scroll-wrapper .buy-number {
+  font-size: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.55rem;
+  padding-right: 0.55rem;
+}
+.scroll-wrapper .buy-number .drop-off {
+  color: #fe9f33;
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1.375rem;
+}
+.scroll-wrapper .buy-number .title {
+  display: inline-block;
+  vertical-align: middle;
+  color: #9c9a9d;
+  font-size: 0.625rem;
+  line-height: 1.5rem;
+}
+.scroll-wrapper .buy-number .buy-controls {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 4.5rem;
+  height: 1.5rem;
+  margin-left: 0.375rem;
+}
+.scroll-wrapper .buy-number .stock {
+  display: inline-block;
+  vertical-align: middle;
+  color: #939196;
+  line-height: 1.5rem;
+  font-size: 0.625rem;
+  margin-left: 0.55rem;
+}
+.scroll-wrapper .buy-number .stock span {
+  color: #ac555b;
+}
+.scroll-wrapper .spec-wra .spec-header {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #f1eff2;
+  position: relative;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.65rem;
+  padding-left: 0.55rem;
+}
+.scroll-wrapper .spec-wra .spec-header .icon {
+  position: absolute;
+  color: #807e81;
+  display: block;
+  transition: transform 0.3s ease;
+  width: 0.75rem;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  right: 0.6rem;
+  top: 0.6rem;
+  font-size: 0.75rem;
+}
+.scroll-wrapper .spec-wra .spec-header .icon.showDetail {
+  transform: rotate(90deg);
+}
+.scroll-wrapper .spec-wra .detail-content {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.55rem;
+  line-height: 0.825rem;
+}
+.scroll-wrapper .spec-wra .detail-content img {
+  max-width: 100%;
+}
+.scroll-wrapper .spec-wra .specification-list .item {
+  line-height: 0.75rem;
+  font-size: 0.6rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.scroll-wrapper .spec-wra .specification-list .item:before,
+.scroll-wrapper .spec-wra .specification-list .item:after {
+  content: " ";
+  display: table;
+}
+.scroll-wrapper .spec-wra .specification-list .item:after {
+  clear: both;
+}
+.scroll-wrapper .spec-wra .specification-list .item .key {
+  display: block;
+  float: left;
+  color: #666;
+  line-height: 1.125rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  width: 3.15rem;
+}
+.scroll-wrapper .spec-wra .specification-list .item .value {
+  float: left;
+  width: 11.35rem;
+}
+.scroll-wrapper .spec-wra .specification-list .item .value .spec-list .spec-item {
+  display: inline-block;
+  margin-right: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0.2rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.75rem;
+  color: #000;
+  border: 1px solid #f6f6f6;
+  border-radius: 0.15rem;
+  background: #f6f6f6;
+}
+.scroll-wrapper .spec-wra .specification-list .item .value .spec-list .active {
+  color: #dd6453;
+  border: 1px solid #dd6453;
+}
+.scroll-wrapper .detail-list .detail-header {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #f1eff2;
+  position: relative;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.65rem;
+  padding-left: 0.55rem;
+}
+.scroll-wrapper .detail-list .detail-header .icon {
+  position: absolute;
+  color: #807e81;
+  display: block;
+  transition: transform 0.3s ease;
+  width: 0.75rem;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  right: 0.6rem;
+  top: 0.6rem;
+  font-size: 0.75rem;
+}
+.scroll-wrapper .detail-list .detail-header .icon.showDetail {
+  transform: rotate(90deg);
+}
+.scroll-wrapper .detail-list .detail-content {
+  min-height: 2.5rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.625rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.55rem;
+  line-height: 0.825rem;
+}
+.scroll-wrapper .detail-list .detail-content img {
+  max-width: 100%;
+}
+.scroll-wrapper .detail-list .specification-list .item {
+  line-height: 0.925rem;
+  font-size: 0.6rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.scroll-wrapper .detail-list .specification-list .item:before,
+.scroll-wrapper .detail-list .specification-list .item:after {
+  content: " ";
+  display: table;
+}
+.scroll-wrapper .detail-list .specification-list .item:after {
+  clear: both;
+}
+.scroll-wrapper .detail-list .specification-list .item .key {
+  display: block;
+  float: left;
+  color: #666;
+  word-wrap: break-word;
+  word-break: break-all;
+  width: 4.7rem;
+}
+.scroll-wrapper .detail-list .specification-list .item .value {
+  display: block;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: #999999;
+  width: 9.625rem;
+  margin-left: 4.7rem;
+}
+.scroll-wrapper .detail-list .no-specification {
+  text-align: center;
+  font-size: 0.5rem;
+  color: #999;
+}
+.controls {
+  font-size: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fefefe;
+  width: 14.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  height: 2.25rem;
+}
+.controls .btn {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  background: #db444d;
+  width: 7rem;
+  height: 1.7rem;
+  line-height: 1.7rem;
+  font-size: 0rem;
+}
+.controls .btn .icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.625rem;
+  height: 0.625rem;
+  line-height: 0.625rem;
+  font-size: 0.7rem;
+}
+.controls .btn span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.625rem;
+  margin-left: 0.375rem;
+}
+.controls .btn:last-child {
+  background: #ff9f31;
+  margin-left: 0.5rem;
+}
+.score-controls {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fe9f33;
+  height: 2.325rem;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.score-controls .icon {
+  width: 0.75rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  font-size: 0.9rem;
+  margin-top: 0.7125rem;
+  margin-right: 0.7rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.score-controls .text {
+  height: 0.9rem;
+  line-height: 2.325rem;
+  font-size: 0.675rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.preview-win {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-animation: fadeIn 0.6s linear;
+}
+.preview-win img {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  display: block;
+  width: 90%;
+  -webkit-transform: translateY(-50%);
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

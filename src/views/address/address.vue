@@ -109,6 +109,10 @@
                 	this.query.goodsId = this.$route.query.goodsId;
                 }
 
+                if (this.$route.query.chooseJsonProp) {
+                    this.query.chooseJsonProp = this.$route.query.chooseJsonProp;
+                }
+
                 if (this.$route.query.amount) {
                 	this.query.amount = this.$route.query.amount;
                 }

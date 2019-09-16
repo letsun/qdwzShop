@@ -217,10 +217,13 @@
 		},
 		mounted() {
 			this.$nextTick(async () => {
-
 				// 收集参数
                 if (this.$route.query.goodsId) {
                 	this.query.goodsId = this.$route.query.goodsId;
+                }
+
+                if (this.$route.query.chooseJsonProp) {
+                    this.query.chooseJsonProp = this.$route.query.chooseJsonProp;
                 }
 
                 if (this.$route.query.amount) {
@@ -302,11 +305,11 @@
 			},
 			orderProduct() {
 				let orderProduct = [];
-
 				for (let i = 0, len = this.productList.length; i < len; i++) {
 					let orderProductObject = {};
 					orderProductObject.goodsId = this.productList[i].goodsId;
 					orderProductObject.amount = this.productList[i].amount;
+					orderProductObject.chooseJsonProp = this.productList[i].chooseJsonProp;
 					orderProduct.push(orderProductObject);
 				}
 
@@ -409,21 +412,25 @@
 			},
 			initProductList() {
 				let url = '';
+                var chooseJsonProp = '';
 				if (this.query.isCart === 'cart') {
 					url = api.cart.getGoodsListByCart;
 				} else {
 					url = api.order.getGoodsListById;
 				}
-				
+				if (this.$route.query.chooseJsonProp) {
+                    chooseJsonProp = JSON.parse(this.$route.query.chooseJsonProp);
+				}
+
 				return new Promise((resolve, reject) => {
 					this.$http.get(url, {
 						params: {
 							goodsId: this.$route.query.goodsId,
-							amount: this.$route.query.amount
+							amount: this.$route.query.amount,
+                            chooseJsonProp: chooseJsonProp,
 						}
 					}).then((response) => {
 						let res = response.data;
-
 						if (res.code === statusCode.SUCCESS) {
 							this.isLoadCompleted = true;
 							this.productList = res.data.goodsList;
@@ -433,7 +440,6 @@
 						} else {
 	                        
 	                        util.checkStatus(this, res, {}, this.initProductList);
-
 	                    }
 
 	                    resolve();

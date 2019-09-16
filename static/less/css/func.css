@@ -1,0 +1,19 @@
+/*使用px2rem和rem2px混合宏，必须定义@base设计稿大小*/
+/**
+ * 实际px转换成rem
+ * @param  @name 属性名
+ * @param @px   实际px值
+ * @return 对应属性名经过优化的rem属性值
+ */
+/**
+ * rem转换成实际的px
+ * @param  @name 属性名
+ * @param @rem  rem值
+ * @return 对应属性名经过优化的px属性值
+ */
+/**
+ * 如果不想用rem，可以使用px，以下代码可以自动优化各种屏幕的px，让所有属性显示的效果一样
+ * @param  @name 属性名
+ * @param  @px   实际的px值
+ * @return     对应属性名经过优化的px属性值
+ */

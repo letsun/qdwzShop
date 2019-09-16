@@ -47,6 +47,10 @@
 	                	query.amount = this.$route.query.amount;
 	                }
 
+                    if (this.$route.query.chooseJsonProp) {
+                        query.chooseJsonProp = this.$route.query.chooseJsonProp;
+                    }
+
 	                if (this.$route.query.isCart) {
 	                	query.isCart = this.$route.query.isCart;
 	                }
@@ -58,6 +62,9 @@
 	                if (this.$route.query.redirectUrl) {
 	                	query.redirectUrl = this.$route.query.redirectUrl;
 	                }
+
+	                console.log(3333);
+	                console.log(query);
 
 					this.$router.push({
 						path: path,
